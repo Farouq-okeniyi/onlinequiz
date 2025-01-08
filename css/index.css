@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    background-size:cover;
+    box-sizing: border-box;
+}
+body{
+    background-color: #001e4d;
+}
+.startbtn{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 2s ease;
+}
+/*styleing the start button*/
+.startbtn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: #001e4d;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+button:hover{
+    border-color: #001e4d;
+    background-color: #001e4d;
+    color: #fff;
+}
+.infobox{
+    display:none;
+    transition: all 2s ease;
+    width: 90%;  
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.quizbox{
+    display: none;
+}
+.resultbox{
+    display: none;
+}
+.quizbox, .resultbox{
+    transition: all 2s ease;
+    width: 90%;  
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+ .infobox .infotitle h1, .quizbox header{
+    padding: 0px 0px 10px 0px;
+    font-size: 25px;
+}
+.infobox .infolist .info, .quizbox section .optionlist .option{
+    font-size: 20px;
+    margin: 10px 0 30px 0;
+    cursor: pointer;
+    background-color: #001e4d7b;
+    padding: 10px 40px;
+}
+.infobox .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+    border-top: 2px solid lightgray;
+    margin-top: 10px    ;
+}
+.infobox .buttons button{
+    padding: 20px;
+    margin-left: 5px;
+    font-size: 15px;
+    width: 100px;
+}
+.quizbox{
+    font-size: 15px;
+}
+.quizbox header{
+    display: flex;
+    justify-content: space-between;
+}
+.quizbox header .timer{
+    color: #001e4d;
+    font-size: 20px;
+    display: flex;
+    
+}
+.quizbox header .timer .timersec{
+    color: green;
+    padding-left: 5px;
+    font-size: 20px;
+}
+.quizbox header .timeline{
+    position: absolute;
+    top: 68px;
+    left: 0px;
+    height: 3px;
+    width: 50%;
+    background-color: #001e4d;
+  
+}
+.quizbox footer{
+    display: flex;
+    justify-content: center;
+}
+.quizbox footer div span{
+    display: inline;
+}
+.quizbox section .que_text{
+    justify-content: left;
+}
+.quizbox section .que_text span{
+    font-size: 30px;
+    color: #001e4d;
+}
+.quizbox footer button{
+    margin-left: 20px;
+    padding: 5px;
+    margin-top: -4px;
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid #001e4d;
+    display: none;
+}
+.quizbox section .optionlist .option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.quizbox section .optionlist .option.disabled{
+    pointer-events: none;
+}
+.quizbox section .optionlist .option:hover{
+      background-color: #001e4db6;
+      border-color: #001e4d;
+}
+.resultbox{
+    text-align: center;
+}
+.resultbox .icon{
+    font-size: 60px;
+    color: goldenrod;
+}
+.resultbox div h1{
+    color: green;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+.resultbox .buttonreset{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px    ;
+}
+.resultbox .buttonreset button{
+    height: 30px;
+    padding: 0 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.resultbox .buttonreset .green, .buttons .continue{
+    background-color: rgba(0, 128, 0, 0.443);
+    border: 1px solid green;
+    color: green;
+    transition: 0.5s;
+}
+.resultbox .buttonreset .green:hover, .buttons .continue:hover{
+    background-color: green;
+    border: 1px solid rgba(0, 128, 0, 0.443);
+    color: white;
+}
+.resultbox .buttonreset .red, .buttons .quit{
+    background-color: rgba(255, 0, 0, 0.567);
+    border: 1px solid red;
+    color: red;
+    transition: 0.5s;
+}
+.resultbox .buttonreset .red:hover, .buttons .quit:hover{
+    background-color: red;
+    border: 1px solid rgba(255, 0, 0, 0.567);
+    color: white;
+}
+@media screen and (max-width : 480px) {
+    .infobox .infotitle h1{
+        font-size: 25px;
+        padding: 0px;
+    }
+    .info{
+        margin: 0px;
+        padding: 0px;
+        top: 0%;
+        left: 0%;
+    }
+    .infobox .infolist .info{
+        /* margin: 2px; */
+        padding: 0px;
+        background-color: white;
+        font-size: 15px;
+    }
+    #nameid{
+        height: 15px;
+        width: 80px;
+    }
+    #inputname{
+        font-size: 15px;
+    }
+    #continueid{height: 20px;
+        padding: 0px;
+        margin: 0px;
+        margin-right: 10px;
+    }
+    #quitid{
+        height: 20px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .quizbox header .title{
+        font-size: 15px;
+    }
+    .quizbox header .timer{
+        font-size: 15px;
+    }
+    .quizbox section .que_text span {
+        font-size: 20px;
+        color: #001e4d;
+    }
+    .resultbox div .cograts{
+        font-size: 15px;
+    }
+    .resultbox div h1{
+        font-size: 20px;
+    }
+
+}
